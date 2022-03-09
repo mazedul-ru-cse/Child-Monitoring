@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="top"
+    android:background="#FFA000">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_outline_account_circle_24">
+    </ImageView>
+    <TextView
+        android:id="@+id/parentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="M A Mazedul Islam"
+        android:fontFamily="@font/aclonica"
+        android:textSize="15sp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/userEmailHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Email"
+        android:textSize="13sp">
+
+    </TextView>
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#0B0A0A"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    tools:context="com.example.view.AboutDeveloper">
+
+    <LinearLayout
+        android:background="@drawable/about"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="Designer and Developer"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="M A Mazedul Islam"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="B.Sc in Computer Science and Engineering"/>
+
+        <TextView
+            android:id="@+id/college_name"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+
+            android:textSize="11sp"
+            android:layout_height="wrap_content"
+            android:text="@string/college_name"/>
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:layout_height="wrap_content"
+            android:text="Affiliated with Rajshahi University \n(Bangladesh)"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:text="Contact :"/>
+
+        <TextView
+            android:id="@+id/fb_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:text="@string/fb_link"/>
+
+
+        <TextView
+            android:id="@+id/twitter_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:text="@string/tw_link"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="Email : "/>
+
+            <TextView
+                android:id="@+id/about_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_link"
+                />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Phone : "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/aboutPhone"
+            android:textColor="@color/black"
+            android:text="+8801770-554970"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

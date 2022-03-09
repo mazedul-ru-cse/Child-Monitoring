@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".SetRating"
+    android:gravity="center">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rateText"
+        android:text="Rate : "
+        android:textSize="40sp"/>
+
+    <RatingBar
+        android:id="@+id/ratingApp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="#FFB600"
+        android:numStars="5"
+        android:stepSize="1"
+        />
+
+    <EditText
+        android:id="@+id/rateComment"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:hint="Enter your comment"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/rateSubmit"
+            android:layout_width="wrap_content"
+            android:text="Submit"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
