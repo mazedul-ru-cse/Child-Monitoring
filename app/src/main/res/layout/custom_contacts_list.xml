@@ -2,9 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_margin="10dp"
+    android:layout_margin="5dp"
     android:gravity="center"
-    android:background="@drawable/layout_round"
     android:layout_height="wrap_content">
 
 
@@ -12,6 +11,8 @@
         android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="mazed"
+        android:textColor="@color/black"
         android:gravity="center"
         android:textSize="20sp"
         android:id="@+id/contactName"/>
@@ -20,10 +21,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
+        android:text="017755"
         android:layout_marginRight="5dp"
+        android:textColor="@color/black"
         android:textSize="15sp"
         android:layout_marginBottom="5dp"
         android:gravity="center"
         android:id="@+id/contactNumber"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="1dp"/>
 
 </LinearLayout>

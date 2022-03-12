@@ -1,12 +1,19 @@
 package com.example.control.contacts;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.control.callLog.CallLogAdapter;
@@ -41,7 +48,40 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyView
         holder.contactName.setText(contactsList.getContactName());
         holder.contactNumber.setText(contactsList.getContactNumber());
 
+        Intent callIntent = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:"+holder.contactNumber.getText().toString()));
 
+        holder.contactName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(ActivityCompat.checkSelfPermission(context , Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+                    //Toast.makeText(, "", Toast.LENGTH_SHORT).show();
+                    requestPermission();
+                }else{
+                    context.startActivity(callIntent);
+                }
+            }
+        });
+
+        holder.contactNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(ActivityCompat.checkSelfPermission(context , Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+                    //Toast.makeText(, "", Toast.LENGTH_SHORT).show();
+                    requestPermission();
+                }else{
+                    context.startActivity(callIntent);
+                }
+            }
+        });
+
+
+    }
+
+    private void requestPermission() {
+        ActivityCompat.requestPermissions((Activity) context, new String[] { Manifest.permission.CALL_PHONE} , 1);
     }
 
     @Override
@@ -59,4 +99,5 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyView
             contactNumber = itemView.findViewById(R.id.contactNumber);
         }
     }
+
 }

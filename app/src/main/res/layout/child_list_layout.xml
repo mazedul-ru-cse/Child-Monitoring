@@ -3,9 +3,11 @@
     android:id="@+id/childListView"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:textColor="@color/black"
+    android:background="#BEFFFFEE"
+    android:gravity="center"
     android:padding="10dp"
-    android:textStyle="bold"
     android:textSize="15sp"
-    android:gravity="center">
+    android:textStyle="bold">
 
 </TextView>

@@ -3,11 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical"
-    tools:context="com.example.control.smsHistory.ChildSmsHistory">
-
+    android:layout_height="match_parent"
+    tools:context="com.example.control.photos.Photos">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +15,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/contactsActiveChild"
+            android:id="@+id/photoActiveChild"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -37,7 +35,7 @@
                 android:text="Last update ">
             </TextView>
             <TextView
-                android:id="@+id/contactsUpdateDateAndTime"
+                android:id="@+id/photoUpdateDateAndTime"
                 android:layout_width="wrap_content"
                 android:textColor="@color/white"
                 android:layout_height="wrap_content"
@@ -47,27 +45,14 @@
 
         </LinearLayout>
 
-
     </LinearLayout>
 
-    <TextView
+    <ImageView
+        android:id="@+id/childPhoto"
         android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="15dp"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:text="Contacts">
-    </TextView>
+        android:layout_gravity="center"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_margin="10dp"
-        android:id="@+id/contactsReView"
-        android:padding="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

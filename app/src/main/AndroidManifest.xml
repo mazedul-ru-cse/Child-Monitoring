@@ -25,6 +25,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChildMonitoring">
         <activity
+            android:name="com.example.control.photos.Photos"
+            android:exported="false" />
+        <activity
             android:name="com.example.control.contacts.Contacts"
             android:exported="false" />
         <activity android:name="com.example.view.AboutDeveloper" />

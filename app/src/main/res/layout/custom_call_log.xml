@@ -4,6 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:orientation="horizontal"
     android:layout_height="wrap_content">
@@ -19,10 +20,11 @@
 
         <TextView
             android:id="@+id/callLogNumber"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="01770554970"
-            android:textSize="15sp">
+            android:textSize="20sp">
 
         </TextView>
 
@@ -31,7 +33,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mazedul islam"
-            android:textSize="12sp"></TextView>
+            android:textColor="@color/black"
+            android:textSize="15sp"></TextView>
 
     </LinearLayout>
 
@@ -47,6 +50,7 @@
         <TextView
             android:id="@+id/callLogDate"
             android:layout_width="wrap_content"
+            android:textColor="@color/black"
             android:layout_marginRight="10dp"
             android:layout_height="wrap_content"
             android:text="12-02-2021"></TextView>
@@ -55,7 +59,7 @@
             android:id="@+id/callLogDetails"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/ic_outline_info_24">
+            android:background="@drawable/call_log_d_icon">
 
         </ImageView>
 

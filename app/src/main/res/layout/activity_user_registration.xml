@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     android:gravity="center"
     android:layout_margin="10dp"
     tools:context=".UserRegistration">
@@ -18,10 +19,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/aclonica"
             android:text="Child Monitoring"
-            android:textColor="#FF9800"
-            android:textSize="20sp">
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="25sp">
 
         </TextView>
 
@@ -30,30 +31,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:padding="10dp"
             android:hint="Full name"
+            android:padding="10dp"
+            android:textColor="@color/black"
             android:textSize="15sp"></EditText>
+
         <EditText
             android:id="@+id/userEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:hint="Email Address"
+            android:padding="10dp"
+            android:textColor="@color/black"
             android:textSize="15sp"></EditText>
+
         <EditText
             android:id="@+id/userPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:textColor="@color/black"
             android:hint="Password (at least 6 digit)"
+            android:padding="10dp"
             android:textSize="15sp"></EditText>
 
         <EditText
             android:id="@+id/userConformPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:hint="Confirm password"
+            android:padding="10dp"
+            android:textColor="@color/black"
             android:textSize="15sp"></EditText>
 
         <Button
@@ -61,12 +68,13 @@
             android:id="@+id/userRegistration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
             android:layout_marginTop="20dp"
-            android:text="Register"
+            android:background="@drawable/bg_round"
             android:padding="10dp"
-            android:textSize="15dp"
-            >
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15dp">
 
         </Button>
 
@@ -74,9 +82,10 @@
             android:id="@+id/userAlreadyRegistered"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
             android:text="Already Registered? Login Here"
             android:textAllCaps="false"
-            android:gravity="center"
             android:textColor="#072BF6"
             android:textSize="10sp"></TextView>
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".Login">
@@ -12,6 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="10dp"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -19,6 +21,7 @@
             android:id="@+id/loginEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:hint="Email Address"
             android:padding="10dp"
             android:textSize="15sp"></EditText>
@@ -28,6 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
+            android:textColor="@color/black"
             android:padding="10dp"
             android:textSize="15sp"></EditText>
 
@@ -36,8 +40,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:background="@drawable/bg_round"
             android:text="Login"
             android:textAllCaps="false"
+            android:textColor="@color/white"
             android:textSize="15sp"></Button>
 
         <TextView
@@ -49,7 +55,7 @@
             android:text="Forgot Password?"
             android:textAllCaps="false"
             android:textColor="#072BF6"
-            android:textSize="10sp"></TextView>
+            android:textSize="15sp"></TextView>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,7 +65,7 @@
             android:gravity="center">
 
             <View
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:background="@color/black"
                 android:layout_height="1dp"/>
 
@@ -73,7 +79,7 @@
                 android:textSize="15sp"></TextView>
 
             <View
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:background="@color/black"
                 android:layout_height="1dp"/>
 
@@ -83,9 +89,10 @@
             android:id="@+id/createAnAccount"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="Create an account."
+            android:text="Create an account"
+            android:textSize="15sp"
             android:textAllCaps="false"
             android:textColor="#59F606"></TextView>
 

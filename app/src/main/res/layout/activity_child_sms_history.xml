@@ -4,23 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context="com.example.control.smsHistory.ChildSmsHistory">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:gravity="center"
-        android:background="#9FF60404"
+        android:background="@color/purple_500"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/smsLogActiveChild"
             android:layout_width="wrap_content"
+            android:textColor="@color/white"
             android:layout_height="wrap_content"
             android:text="Child Name"
-            android:textSize="15sp"></TextView>
+            android:textSize="20sp"></TextView>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,14 +32,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
                 android:text="Last update ">
             </TextView>
             <TextView
                 android:id="@+id/smsLogUpdateDateAndTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10sp"
+                android:textSize="15sp"
+                android:textColor="@color/white"
                 android:text="02-10-2021 ">
             </TextView>
 
@@ -50,8 +54,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:gravity="center"
         android:layout_marginStart="15dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:text="Messages">
     </TextView>

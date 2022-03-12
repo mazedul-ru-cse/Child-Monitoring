@@ -83,8 +83,9 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         // Show child list
         try {
-            ProgressDialog dialog = ProgressDialog.show(Dashboard.this , "","Loading...",true);
-            dialog.show();
+            ProgressDialog dialog = ProgressDialog.show(Dashboard.this ,
+                    "","Loading...",true);
+            
             ArrayList<String> list = new ArrayList<>();
             ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.child_list_layout, list);
 
@@ -114,6 +115,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                    dialog.dismiss();
                 }
             });
 

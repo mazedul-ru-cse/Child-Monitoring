@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.control.callLog.ChildCallHistory;
 import com.example.control.contacts.Contacts;
 import com.example.control.location.ChildLocation;
+import com.example.control.photos.Photos;
 import com.example.control.smsHistory.ChildSmsHistory;
 import com.example.model.Login;
 import com.example.model.R;
@@ -31,7 +32,13 @@ public class ParentProfileControl extends AppCompatActivity {
 
     TextView activeChildNameV;
     public static String activeChildName;
-    ImageView showChildLoc , showChildCallLog , showChildSmsHistory , showChildBrowserHistory;
+    ImageView showChildLoc ,
+            showChildCallLog ,
+            showChildSmsHistory ,
+            showChildBrowserHistory,
+            showChildContacts,
+            showChildPhoto;
+
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     DatabaseReference databaseReference;
     @Override
@@ -44,6 +51,8 @@ public class ParentProfileControl extends AppCompatActivity {
         showChildCallLog = findViewById(R.id.showChildCallHistory);
         showChildSmsHistory = findViewById(R.id.showChildMessageHistory);
         showChildBrowserHistory = findViewById(R.id.showChildBrowsingHistory);
+        showChildContacts = findViewById(R.id.showChildContacts);
+        showChildPhoto = findViewById(R.id.showChildPhoto);
 
 
 
@@ -86,19 +95,37 @@ public class ParentProfileControl extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(ParentProfileControl.this , Contacts.class));
 
-//                AlertDialog alertDialog = new AlertDialog.Builder(ParentProfileControl.this).create();
-//                alertDialog.setMessage("Coming Soon");
-//                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL , "OK", new DialogInterface.OnClickListener(){
-//
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                dialog.dismiss();
-//                            }
-//                        });
-//
-//                alertDialog.show();
+                AlertDialog alertDialog = new AlertDialog.Builder(ParentProfileControl.this).create();
+                alertDialog.setMessage("Coming Soon");
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL , "OK", new DialogInterface.OnClickListener(){
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                alertDialog.show();
+            }
+        });
+
+        //Show child contacts list
+
+        showChildContacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ParentProfileControl.this , Contacts.class));
+            }
+        });
+
+
+        //Show child photo
+
+        showChildPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ParentProfileControl.this , Photos.class));
             }
         });
 

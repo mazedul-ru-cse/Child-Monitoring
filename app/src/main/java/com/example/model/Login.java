@@ -76,10 +76,9 @@ public class  Login extends AppCompatActivity {
                 // Show progress dialog
 
                 ProgressDialog dialog = ProgressDialog.show(Login.this , "","Login. Please wait...",true);
-                dialog.show();
 
                 Login.userID = setSharedPreferences.getString("userID","");
-
+                dialog.show();
                 //Go to Dashboard activity after 2 second
                 new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                     @Override
@@ -112,9 +111,11 @@ public class  Login extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(email)) {
                     loginEmail.setError("Email is required.");
+                    dialog.dismiss();
                     return;
                 }
                 if (TextUtils.isEmpty(password)) {
+                    dialog.dismiss();
                     loginPassword.setError("Password is required.");
                     return;
                 }
@@ -131,6 +132,7 @@ public class  Login extends AppCompatActivity {
                             // Get current user UID
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                             String userUID = user.getUid();
+
                             SharedPreferences.Editor editor = setSharedPreferences.edit();
                             editor.putString("userID",userUID);
                             editor.putString("password",password);

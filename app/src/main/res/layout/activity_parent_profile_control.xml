@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.control.ParentProfileControl">
@@ -19,7 +20,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="#9FF60404">
+            android:background="@color/purple_500">
 
 
             <TextView
@@ -56,6 +57,7 @@
 
                 <TextView
                     android:id="@+id/offlineOnline"
+                    android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="online" />
@@ -70,6 +72,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:layout_marginTop="24dp"
             android:fontFamily="@font/aclonica"
             android:text="Parent Control Options"
@@ -88,6 +91,7 @@
             android:layout_marginEnd="10dp"
             android:orientation="horizontal"
             android:padding="10dp"
+            android:background="@color/white"
             android:layout_margin="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -102,12 +106,14 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@color/white"
                     android:gravity="center">
 
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:layout_below="@id/showChildLocation"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
@@ -134,12 +140,13 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="10dp"
+                    android:background="@color/white"
                     android:gravity="center">
 
                     <TextView
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/black"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/showChildCallHistory"
                         android:layout_centerHorizontal="true"
@@ -162,12 +169,14 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:orientation="horizontal"
             android:padding="10dp"
+            android:background="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -181,6 +190,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@color/white"
 
                     android:gravity="center">
 
@@ -190,6 +200,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/showChildMessageHistory"
                         android:layout_centerHorizontal="true"
+                        android:textColor="@color/black"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/aclonica"
                         android:gravity="center_horizontal"
@@ -214,6 +225,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@color/white"
                     android:gravity="center">
 
                     <TextView
@@ -223,6 +235,7 @@
                         android:layout_below="@id/showChildBrowsingHistory"
                         android:layout_centerHorizontal="true"
                         android:fontFamily="@font/aclonica"
+                        android:textColor="@color/black"
                         android:text="Browsing"
                         android:textSize="15sp" />
 
@@ -238,6 +251,91 @@
 
 
         </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/showChildContacts"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/aclonica"
+                        android:gravity="center_horizontal"
+                        android:text="Contacts"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/showChildContacts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/ic_baseline_contacts_24" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/showChildPhoto"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/aclonica"
+                        android:textColor="@color/black"
+                        android:text="Images"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/showChildPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        app:srcCompat="@drawable/ic_baseline_photo_24" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
