@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class UserRegistration extends AppCompatActivity {
 
     EditText userName,userEmail,userPassword,userConfPassword;
-    Button userRegister;
+    TextView userRegister;
     ProgressBar progressBar;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;

@@ -20,6 +20,15 @@ import com.example.control.photos.Photos;
 import com.example.control.smsHistory.ChildSmsHistory;
 import com.example.model.Login;
 import com.example.model.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -41,6 +50,9 @@ public class ParentProfileControl extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     DatabaseReference databaseReference;
+    private InterstitialAd mInterstitialAd;
+    AdView adView2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,11 +65,21 @@ public class ParentProfileControl extends AppCompatActivity {
         showChildBrowserHistory = findViewById(R.id.showChildBrowsingHistory);
         showChildContacts = findViewById(R.id.showChildContacts);
         showChildPhoto = findViewById(R.id.showChildPhoto);
+        adView2 = findViewById(R.id.banner_ads_view2);
 
-
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
 
         // Get last update date and time
         getlastUpdateTimeDate();
+
+        //Set Ads
+        setAds(getString(R.string.interstitial_ads2));
+        // Show Banner Ads
+        showBannerAds();
 
         //Set child name
         activeChildNameV.setText(activeChildName);
@@ -67,7 +89,26 @@ public class ParentProfileControl extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               startActivity(new Intent(ParentProfileControl.this , ChildLocation.class));
+
+                if(mInterstitialAd != null){
+
+                    mInterstitialAd.show(ParentProfileControl.this);
+
+                    mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                        @Override
+                        public void onAdDismissedFullScreenContent() {
+                            super.onAdDismissedFullScreenContent();
+
+                            mInterstitialAd = null;
+                            setAds(getString(R.string.interstitial_ads3));
+                            startActivity(new Intent(ParentProfileControl.this , ChildLocation.class));                            mInterstitialAd = null;
+                        }
+                    });
+
+                }else{
+                    startActivity(new Intent(ParentProfileControl.this , ChildLocation.class));
+                }
+
             }
         });
 
@@ -75,7 +116,24 @@ public class ParentProfileControl extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(ParentProfileControl.this , ChildCallHistory.class));
+                if(mInterstitialAd != null){
+
+                    mInterstitialAd.show(ParentProfileControl.this);
+
+                    mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                        @Override
+                        public void onAdDismissedFullScreenContent() {
+                            super.onAdDismissedFullScreenContent();
+
+                            mInterstitialAd = null;
+                            setAds(getString(R.string.interstitial_ads4));
+                            startActivity(new Intent(ParentProfileControl.this , ChildCallHistory.class));
+                        }
+                    });
+
+                }else{
+                    startActivity(new Intent(ParentProfileControl.this , ChildCallHistory.class));
+                }
             }
         });
 
@@ -85,7 +143,25 @@ public class ParentProfileControl extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(ParentProfileControl.this , ChildSmsHistory.class));
+                if(mInterstitialAd != null){
+
+                    mInterstitialAd.show(ParentProfileControl.this);
+
+                    mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                        @Override
+                        public void onAdDismissedFullScreenContent() {
+                            super.onAdDismissedFullScreenContent();
+
+                            mInterstitialAd = null;
+                            setAds(getString(R.string.interstitial_ads5));
+                            startActivity(new Intent(ParentProfileControl.this , ChildSmsHistory.class));
+                        }
+                    });
+
+                }else{
+                    startActivity(new Intent(ParentProfileControl.this , ChildSmsHistory.class));
+                }
+
             }
         });
 
@@ -115,7 +191,26 @@ public class ParentProfileControl extends AppCompatActivity {
         showChildContacts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ParentProfileControl.this , Contacts.class));
+
+                if(mInterstitialAd != null){
+
+                    mInterstitialAd.show(ParentProfileControl.this);
+
+                    mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                        @Override
+                        public void onAdDismissedFullScreenContent() {
+                            super.onAdDismissedFullScreenContent();
+
+                            mInterstitialAd = null;
+                            setAds(getString(R.string.interstitial_ads6));
+                            startActivity(new Intent(ParentProfileControl.this , Contacts.class));
+                        }
+                    });
+
+                }else{
+                    startActivity(new Intent(ParentProfileControl.this , Contacts.class));
+                }
+
             }
         });
 
@@ -125,10 +220,37 @@ public class ParentProfileControl extends AppCompatActivity {
         showChildPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ParentProfileControl.this , Photos.class));
+
+                if(mInterstitialAd != null){
+
+                    mInterstitialAd.show(ParentProfileControl.this);
+
+                    mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                        @Override
+                        public void onAdDismissedFullScreenContent() {
+                            super.onAdDismissedFullScreenContent();
+
+                            mInterstitialAd = null;
+                            setAds(getString(R.string.interstitial_ads1));
+                            startActivity(new Intent(ParentProfileControl.this , Photos.class));                        }
+                    });
+
+                }else{
+                    startActivity(new Intent(ParentProfileControl.this , Photos.class));                }
             }
         });
 
+    }
+
+    private void showBannerAds() {
+        try {
+
+            AdRequest adRequest = new AdRequest.Builder().build();
+            adView2.loadAd(adRequest);
+
+        }catch (Exception e) {
+
+        }
     }
 
     private void getlastUpdateTimeDate() {
@@ -168,4 +290,29 @@ public class ParentProfileControl extends AppCompatActivity {
         });
 
     }
+
+    private void setAds(String adsID) {
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        InterstitialAd.load(this, adsID, adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        // The mInterstitialAd reference will be null until
+                        // an ad is loaded.
+                        mInterstitialAd = interstitialAd;
+                        // Log.i(TAG, "onAdLoaded");
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        // Handle the error
+                        //  Log.d(TAG, loadAdError.toString());
+                        mInterstitialAd = null;
+                    }
+                });
+
+    }
+
 }

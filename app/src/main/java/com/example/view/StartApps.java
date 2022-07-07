@@ -1,22 +1,34 @@
 package com.example.view;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.Message;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.model.Login;
 import com.example.model.R;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class StartApps extends AppCompatActivity {
 
-    TextView wel;
+    ImageView startUp;
+   // TextView startTv ;
+
+    int currentProg = 0;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,27 +40,102 @@ public class StartApps extends AppCompatActivity {
         //getSupportActionBar().hide();
 
         setContentView(R.layout.activity_start_apps);
+        startUp = findViewById(R.id.start_up_view);
+        progressBar = findViewById(R.id.start_up_progress);
 
-        wel =  findViewById(R.id.flashWelcome);
+       // showAppName("Child Monitoring");
 
-       // Show welcome message
+
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                wel.setText("Welcome");
-                wel.setTextColor(Color.GREEN);
+                currentProg += 20;
+                progressBar.setProgress(currentProg);
+                progressBar.setMax(100);
             }
         },1000);
 
-        // Wait 1500 ms then go to Login activity
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                currentProg += 20;
+                progressBar.setProgress(currentProg);
+                progressBar.setMax(100);
+            }
+        },2000);
+
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                currentProg += 20;
+                progressBar.setProgress(currentProg);
+                progressBar.setMax(100);
+            }
+        },3000);
+
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                currentProg += 20;
+                progressBar.setProgress(currentProg);
+                progressBar.setMax(100);
+            }
+        },4000);
+
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                currentProg += 20;
+                progressBar.setProgress(currentProg);
+                progressBar.setMax(100);
+            }
+        },5000);
+
+
+
+
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
                 startActivity(new Intent(StartApps.this, Login.class));
                 finish();
             }
-        },3000);
+        },6000);
 
     }
+
+//    private void showAppName(String appName) {
+//
+//        startTv = findViewById(R.id.start_up_name_show);
+//
+//        final int[] i = new int[1];
+//        i[0] = 0;
+//        final int length = appName.length();
+//        final  Handler handler = new Handler(){
+//            @Override
+//            public void handleMessage(@NonNull Message msg) {
+//                super.handleMessage(msg);
+//
+//                char c = appName.charAt(i[0]);
+//                startTv.append(String.valueOf(c));
+//                i[0]++;
+//
+//            }
+//        };
+//
+//        final Timer timer = new Timer();
+//        TimerTask task = new TimerTask() {
+//            @Override
+//            public void run() {
+//                handler.sendEmptyMessage(0);
+//                if (i[0] == length - 1){
+//                    timer.cancel();
+//                }
+//            }
+//        };
+//        timer.schedule(task,1,200);
+//
+//    }
 
 }

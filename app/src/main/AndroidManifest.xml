@@ -24,14 +24,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ChildMonitoring">
+
         <activity
             android:name="com.example.control.photos.Photos"
             android:exported="false" />
         <activity
+            android:name="com.example.UserGuideViwer"
+            android:exported="false" />
+
+        <activity
             android:name="com.example.control.contacts.Contacts"
             android:exported="false" />
         <activity android:name="com.example.view.AboutDeveloper" />
-        <activity android:name=".SetRating" />
         <activity android:name="com.example.control.smsHistory.ChildSmsHistory" />
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
@@ -49,6 +53,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyApQPdVqC4ByGettgjVrDBFc3Ux48dfi74" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
 
         <activity
             android:name="com.example.control.location.ChildLocation"

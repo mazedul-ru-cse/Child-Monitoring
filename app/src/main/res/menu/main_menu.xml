@@ -10,12 +10,30 @@
         </item>
     </group>
 
-
         <item
             android:title="Profile">
 
             <menu>
                 <group android:checkableBehavior="single">
+
+                    <item
+                        android:id="@+id/download_child_version"
+                        android:title="Download Child Version"
+                        android:icon="@drawable/ic_outline_arrow_circle_down_24">
+                    </item>
+
+                    <item
+                        android:id="@+id/user_guide"
+                        android:title="User Guide"
+                        android:icon="@drawable/ic_outline_help_center_24">
+                    </item>
+
+                    <item
+                        android:id="@+id/privacy_policy"
+                        android:title="Privacy Policy"
+                        android:icon="@drawable/ic_outline_privacy_tip_24">
+                    </item>
+
                     <item
                         android:id="@+id/nav_logout"
                         android:title="Logout"

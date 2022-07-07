@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/childListView"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:textColor="@color/black"
-    android:background="#BEFFFFEE"
-    android:gravity="center"
+    android:background="@drawable/child_list_border"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
     android:padding="10dp"
-    android:textSize="15sp"
+    android:gravity="center"
+    android:textSize="20sp"
     android:textStyle="bold">
 
-</TextView>
+    </TextView>

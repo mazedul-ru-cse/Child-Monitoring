@@ -7,10 +7,11 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:gravity="center"
-    android:layout_margin="10dp"
     tools:context=".UserRegistration">
 
     <LinearLayout
+        android:layout_margin="10dp"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -19,7 +20,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Child Monitoring"
+            android:text="Sign Up"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="25sp">
@@ -32,9 +33,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:hint="Full name"
+            android:background="@drawable/child_list_border"
+            android:textColorHint="#BF000000"
             android:padding="10dp"
             android:textColor="@color/black"
-            android:textSize="15sp"></EditText>
+            android:textSize="15sp"/>
 
         <EditText
             android:id="@+id/userEmail"
@@ -42,28 +45,39 @@
             android:layout_height="wrap_content"
             android:hint="Email Address"
             android:padding="10dp"
+            android:layout_marginTop="6dp"
+            android:textColorHint="#BF000000"
+            android:background="@drawable/child_list_border"
             android:textColor="@color/black"
-            android:textSize="15sp"></EditText>
+            android:textSize="15sp"/>
 
         <EditText
             android:id="@+id/userPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:textColor="@color/black"
-            android:hint="Password (at least 6 digit)"
+            android:hint="Password (length at least 6)"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/child_list_border"
+            android:textColorHint="#BF000000"
             android:padding="10dp"
-            android:textSize="15sp"></EditText>
+            android:textSize="15sp"/>
 
         <EditText
             android:id="@+id/userConformPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Confirm password"
+            android:inputType="textPassword"
             android:padding="10dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/child_list_border"
+            android:textColorHint="#BF000000"
             android:textColor="@color/black"
-            android:textSize="15sp"></EditText>
+            android:textSize="15sp"/>
 
-        <Button
+        <TextView
 
             android:id="@+id/userRegistration"
             android:layout_width="match_parent"
@@ -71,23 +85,23 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/bg_round"
             android:padding="10dp"
+            android:gravity="center"
             android:text="Register"
-            android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp">
+            android:textSize="18dp">
 
-        </Button>
+        </TextView>
 
         <TextView
             android:id="@+id/userAlreadyRegistered"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:text="Already Registered? Login Here"
             android:textAllCaps="false"
             android:textColor="#072BF6"
-            android:textSize="10sp"></TextView>
+            android:textSize="15sp"/>
 
 
         <ProgressBar

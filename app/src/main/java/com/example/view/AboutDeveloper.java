@@ -18,7 +18,7 @@ import com.example.model.R;
 
 public class AboutDeveloper extends AppCompatActivity {
 
-    TextView fbLink , twLink , phone , aboutEmail , collegeName;
+    TextView fbLink , twLink , aboutEmail ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +26,9 @@ public class AboutDeveloper extends AppCompatActivity {
 
         fbLink =  findViewById(R.id.fb_link);
         twLink =  findViewById(R.id.twitter_link);
-        phone =  findViewById(R.id.aboutPhone);
+
         aboutEmail =  findViewById(R.id.about_email);
-        collegeName =  findViewById(R.id.college_name);
+
 
 
         // set email address
@@ -43,18 +43,6 @@ public class AboutDeveloper extends AppCompatActivity {
             }
         });
 
-        // College website
-
-        collegeName.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    collegeName.setMovementMethod(LinkMovementMethod.getInstance());
-                }catch (Exception e){
-                    Toast.makeText(AboutDeveloper.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
 
         // set facebook hyperlink
         fbLink.setOnClickListener(new View.OnClickListener() {
@@ -80,36 +68,6 @@ public class AboutDeveloper extends AppCompatActivity {
                 }
             }
         });
-        
-        
-        phone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                
-                if(getCallPermission()){
 
-                    Intent callIntent = new Intent(Intent.ACTION_CALL);
-                    callIntent.setData(Uri.parse("tel:"+phone.getText().toString()));
-                    startActivity(callIntent);
-
-                }
-            }
-        });
-
-    }
-
-    private boolean getCallPermission() {
-
-        if(ContextCompat.checkSelfPermission(AboutDeveloper.this , Manifest.permission.CALL_PHONE)
-         != PackageManager.PERMISSION_GRANTED ){
-            
-            ActivityCompat.requestPermissions(AboutDeveloper.this , new String[] 
-                    { Manifest.permission.CALL_PHONE},1);
-            return true;
-        }else {
-            return true;
-        }
-        
-        
     }
 }

@@ -19,9 +19,23 @@
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.
     -->
-    <string name="fb_link"><a href="https://fb.com/mamazedulislam70">Facebook</a></string>
+    <string name="fb_link"><a href="https://fb.com/mazed70">Facebook</a></string>
     <string name="tw_link"><a href="https://www.twitter.com/mazedul70">Twitter</a></string>
-    <string name="email_link"><a href="mailto:mazedulislam4970@gmail.com">mazedulislam4970@gmail.com</a></string>
+    <string name="email_link"><a href="mailto:mazed.helloboss@gmail.com">mazedulislam4970@gmail.com</a></string>
     <string name="college_name"><a href="https://tec.edu.bd">TMSS Engineering College,Bogura</a></string>
+
+
+    //Admob ads
+    <string name="ads_app_id">ca-app-pub-3940256099942544/3419835294</string>
+    <string name="app_open_ads">ca-app-pub-3940256099942544/3419835294</string>
+    <string name="banner1">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner2">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_ads1">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="interstitial_ads2">ca-app-pub-3940256099942544/3419835294</string>
+    <string name="interstitial_ads3">ca-app-pub-3940256099942544/3419835294</string>
+    <string name="interstitial_ads4">ca-app-pub-3940256099942544/3419835294</string>
+    <string name="interstitial_ads5">ca-app-pub-3940256099942544/3419835294</string>
+    <string name="interstitial_ads6">ca-app-pub-3940256099942544/3419835294</string>
+
 
 </resources>

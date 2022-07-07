@@ -12,39 +12,55 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:layout_margin="10dp"
         android:gravity="center"
+        android:background="@color/white"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"/>
 
         <EditText
             android:id="@+id/loginEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/child_list_border"
             android:textColor="@color/black"
+            android:textColorHint="#BF000000"
             android:hint="Email Address"
             android:padding="10dp"
-            android:textSize="15sp"></EditText>
+            android:textSize="15sp"/>
 
         <EditText
             android:id="@+id/loginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/child_list_border"
             android:hint="Password"
+            android:layout_marginTop="6dp"
+            android:inputType="textPassword"
+            android:textColorHint="#BF000000"
             android:textColor="@color/black"
             android:padding="10dp"
-            android:textSize="15sp"></EditText>
+            android:textSize="15sp"/>
 
-        <Button
+        <TextView
             android:id="@+id/login"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:background="@drawable/bg_round"
             android:text="Login"
-            android:textAllCaps="false"
+            android:padding="8dp"
             android:textColor="@color/white"
-            android:textSize="15sp"></Button>
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/forgetPassword"
@@ -54,8 +70,8 @@
             android:gravity="center"
             android:text="Forgot Password?"
             android:textAllCaps="false"
-            android:textColor="#072BF6"
-            android:textSize="15sp"></TextView>
+            android:textColor="#F59F0523"
+            android:textSize="15sp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,7 +81,7 @@
             android:gravity="center">
 
             <View
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:background="@color/black"
                 android:layout_height="1dp"/>
 
@@ -73,13 +89,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="OR"
+                android:textColor="@color/black"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
 
-                android:textSize="15sp"></TextView>
+                android:textSize="15sp"/>
 
             <View
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:background="@color/black"
                 android:layout_height="1dp"/>
 
@@ -94,7 +111,7 @@
             android:text="Create an account"
             android:textSize="15sp"
             android:textAllCaps="false"
-            android:textColor="#59F606"></TextView>
+            android:textColor="#064AF6"/>
 
     </LinearLayout>
 

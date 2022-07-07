@@ -44,7 +44,7 @@ import java.util.concurrent.TimeUnit;
 public class  Login extends AppCompatActivity {
     public static String userID;
     TextView forgetPass,createAccount;
-    Button btnUserLogin;
+    TextView btnUserLogin;
     EditText loginEmail , loginPassword;
     FirebaseAuth firebaseAuth;
 
@@ -83,11 +83,11 @@ public class  Login extends AppCompatActivity {
                 new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        startActivity(new Intent(Login.this, Dashboard.class));
                         dialog.dismiss();
+                        startActivity(new Intent(Login.this, Dashboard.class));
                         finish();
                     }
-                },200);
+                },2000);
             }
 
         }catch (Exception e){
@@ -104,18 +104,18 @@ public class  Login extends AppCompatActivity {
 
                 // show dialog
                 ProgressDialog dialog = ProgressDialog.show(Login.this , "","Login. Please wait...",true);
-                dialog.show();
+               // dialog.show();
 
                 String email = loginEmail.getText().toString();
                 String password = loginPassword.getText().toString();
 
                 if (TextUtils.isEmpty(email)) {
                     loginEmail.setError("Email is required.");
-                    dialog.dismiss();
+                   // dialog.dismiss();
                     return;
                 }
                 if (TextUtils.isEmpty(password)) {
-                    dialog.dismiss();
+                    //dialog.dismiss();
                     loginPassword.setError("Password is required.");
                     return;
                 }
@@ -128,10 +128,11 @@ public class  Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()){
-
+                            dialog.show();
                             // Get current user UID
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                             String userUID = user.getUid();
+                            Login.userID = userUID;
 
                             SharedPreferences.Editor editor = setSharedPreferences.edit();
                             editor.putString("userID",userUID);
@@ -143,8 +144,8 @@ public class  Login extends AppCompatActivity {
                             Toast.makeText(Login.this, "Login successfully", Toast.LENGTH_SHORT).show();
 
                             //Go to Dashboard activity
-                            startActivity(new Intent(Login.this, Dashboard.class));
                             dialog.dismiss();
+                            startActivity(new Intent(Login.this, Dashboard.class));
                             finish();
                         }else {
                             dialog.dismiss();

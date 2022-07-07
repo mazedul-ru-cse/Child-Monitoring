@@ -17,6 +17,7 @@
     </ImageView>
     <TextView
         android:id="@+id/parentName"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -30,6 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:textStyle="bold"
         android:text="Email"
         android:textSize="13sp">
 
